@@ -73,4 +73,5 @@ For recently_watching_shows table:
 
 How to Run the project:
 1. Replace a working postgres server connection credentials in src > main > resources > application.properties
+2. Build and run the project (ShowHistoryApplication) file
  
