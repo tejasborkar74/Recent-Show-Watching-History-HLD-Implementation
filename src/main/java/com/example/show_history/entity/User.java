@@ -12,7 +12,7 @@ public class User {
     @Column(nullable = false)
     private String username;
 
-    @Column(nullable = true, unique = true)
+    @Column(nullable = false, unique = true)
     private String email;
 
     // constructors

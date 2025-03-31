@@ -24,6 +24,11 @@ public class UserService {
                 .toList();
     }
 
+    public User getUserById(Long userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
     public UserDTO createUser(UserDTO userDTO) {
         User newUser = new User(userDTO.getUsername(), userDTO.getEmail());
         User savedUser = userRepository.save(newUser);

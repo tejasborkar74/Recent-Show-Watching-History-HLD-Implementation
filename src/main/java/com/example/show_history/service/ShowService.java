@@ -2,6 +2,7 @@ package com.example.show_history.service;
 
 import com.example.show_history.dto.SeriesInputDTO;
 import com.example.show_history.entity.Show;
+import com.example.show_history.entity.User;
 import com.example.show_history.repository.ShowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,12 @@ public class ShowService {
     public List<Show> getAllShows() {
         return showRepository.findAll();
     }
+
+    public Show getShowById(Long showId) {
+        return showRepository.findById(showId)
+                .orElseThrow(() -> new RuntimeException("Show not found"));
+    }
+
 
     public Show createMovie(Show movie){
         movie.setEpisodeNo(1);

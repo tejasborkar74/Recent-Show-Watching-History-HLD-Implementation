@@ -15,7 +15,8 @@ APIs:
 For users Table:
 
 1. GET: /api/users/all_users
-2. POST: /api/users/create_user (create a user)
+2. GET: /api/users/{userId}
+3. POST: /api/users/create_user (create a user)
     ``` 
    Request Body
    {
@@ -27,7 +28,8 @@ For users Table:
 For shows Table:
 
 1. GET: /api/shows/all_shows
-2. POST: /api/shows/create_movie
+2. GET: /api/shows/{showId}
+3. POST: /api/shows/create_movie
 ```
     Request Body
     {
